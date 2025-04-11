@@ -1,0 +1,11 @@
+{
+    "gemini_api_key": "",
+    "wp_url": "",
+    "wp_username": "",
+    "wp_app_password": "",
+    "article_count": 1,
+    "article_length": 1500,
+    "use_system_prompt": true,
+    "custom_prompt": "",
+    "default_prompt_file": "prompts/system_seo_prompt.txt"
+}

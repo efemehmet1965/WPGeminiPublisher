@@ -1,0 +1,6 @@
+# requirements.txt WPGeminiPublisher
+google-generativeai   
+requests              
+python-markdown       
+Markdown              
+customtkinter         
