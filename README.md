@@ -33,7 +33,7 @@ Bu araç, özellikle düzenli içerik girişi yapması gereken blog yazarları, 
     *   Modern ve kullanımı kolay arayüz için **CustomTkinter** kullanılmıştır.
     *   **Koyu/Açık tema** desteği sunar.
 *   **Kolay Yapılandırma:**
-    *   Gerekli API anahtarları ve WordPress bilgileri `config.json` dosyası üzerinden veya doğrudan arayüzden ayarlanabilir.
+    *   Gerekli API anahtarları ve WordPress bilgileri **doğrudan uygulama arayüzünden** ayarlanabilir ve kaydedilebilir (`config.json` dosyasına yazılır).
 *   **Esnek Prompt Seçenekleri:**
     *   Hazır **sistem SEO prompt'unu** kullanabilir veya içerik üretimi için tamamen **kendi özel prompt'unuzu** tanımlayabilirsiniz.
 *   **Toplu İşlem:**
@@ -43,19 +43,19 @@ Bu araç, özellikle düzenli içerik girişi yapması gereken blog yazarları, 
 *   **Yanıt Veren Tasarım:**
     *   Uzun sürebilecek API çağrıları sırasında arayüzün kilitlenmemesi için **threading** kullanılır.
 
-
 ---
 
-## ⚙️ Kurulum ve Ayarlar
+
+## ⚙️ Kurulum ve Başlangıç Ayarları
 
 ### Gereksinimler
 
 *   Python 3.8 veya üzeri
 *   `pip` (Python paket yükleyici)
-*   Google Gemini API Anahtarı
-*   WordPress kurulu ve erişilebilir bir web sitesi (REST API aktif olmalı)
-*   WordPress sitenizde **yazı yayınlama yetkisine sahip** bir kullanıcı hesabı (Administrator, Editor, Author rolleri)
-*   Bu kullanıcı için oluşturulmuş bir **WordPress Uygulama Şifresi** (Application Password)
+*   **Google Gemini API Anahtarı:** Uygulamanın makale üretebilmesi için gereklidir.
+*   **WordPress Sitesi:** Erişilebilir, REST API'si aktif ve uygulama şifresi özelliğini destekleyen bir site.
+*   **WordPress Kullanıcı Hesabı:** Sitede **yazı yayınlama yetkisine** (Administrator, Editor, Author rolleri) sahip bir kullanıcı.
+*   **WordPress Uygulama Şifresi:** Yukarıdaki kullanıcı için WordPress üzerinden oluşturulmuş özel bir şifre.
 
 ### Kurulum Adımları
 
@@ -80,32 +80,32 @@ Bu araç, özellikle düzenli içerik girişi yapması gereken blog yazarları, 
     pip install -r requirements.txt
     ```
 
-### Yapılandırma (`config.json`)
+### Başlangıç Ayarları ve Gerekli Bilgiler
 
-Proje kök dizininde bulunan `config.json` dosyasını bir metin düzenleyici ile açın ve aşağıdaki alanları kendi bilgilerinizle doldurun:
+Uygulamayı ilk kez çalıştırmadan önce veya çalıştırdıktan sonra Ayarlar bölümünden şu bilgilere ihtiyacınız olacak:
 
-*   `gemini_api_key`: Google AI Studio üzerinden aldığınız API anahtarınız.
-    *   Nasıl alınır? [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey) adresine gidin ve yeni bir anahtar oluşturun.
-*   `wp_url`: WordPress sitenizin tam adresi (örneğin: `https://siteniz.com`). Sonunda `/` olmamalıdır.
-*   `wp_username`: WordPress yönetici panelinize giriş yaparken kullandığınız kullanıcı adı.
-*   `wp_app_password`: WordPress sitenizden bu uygulama için özel olarak oluşturduğunuz **Uygulama Şifresi**. **Normal giriş şifreniz DEĞİLDİR!** (Aşağıdaki adıma bakın).
-*   `article_count`: Tek seferde üretilecek varsayılan makale sayısı.
-*   `article_length`: Makalelerin hedeflenen yaklaşık karakter sayısı.
-*   `use_system_prompt`: `true` ise dahili SEO prompt'u kullanılır, `false` ise aşağıdaki özel prompt kullanılır.
-*   `custom_prompt`: `use_system_prompt` `false` ise kullanılacak kendi özel prompt metniniz.
-*   `default_prompt_file`: Sistem prompt'unun okunacağı dosya yolu (genellikle değiştirmenize gerek yoktur).
+1.  **Google Gemini API Anahtarı:**
+    *   Nasıl alınır? [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey) adresine gidin, Google hesabınızla giriş yapın ve yeni bir API anahtarı oluşturun. Oluşturulan anahtarı kopyalayın.
+    *   Bu anahtarı uygulamadaki "**Gemini API Key**" alanına yapıştırın.
+
+2.  **WordPress Site Bilgileri:**
+    *   `wp_url`: WordPress sitenizin tam adresi (örn: `https://siteniz.com`). Uygulamadaki "**WordPress URL**" alanına girin.
+    *   `wp_username`: Sitenizdeki yazı yayınlama yetkisine sahip kullanıcının adı. Uygulamadaki "**WP Kullanıcı Adı**" alanına girin.
+    *   `wp_app_password`: **WordPress Uygulama Şifresi**. Bu, normal giriş şifreniz *değildir*. Aşağıdaki adımlarla almanız gerekir:
 
 #### WordPress Uygulama Şifresi Nasıl Alınır?
 
-Bu, uygulamanın sitenize güvenli bir şekilde bağlanabilmesi için kritik öneme sahiptir.
+Bu şifre, uygulamanın sitenize API üzerinden güvenli bir şekilde bağlanmasını sağlar.
 
 1.  WordPress yönetici panelinize (**wp-admin**) giriş yapın.
 2.  Sol menüden **Kullanıcılar** (Users) -> **Profiliniz** (Your Profile) bölümüne gidin.
-3.  Sayfayı aşağı kaydırın ve **Uygulama Şifreleri** (Application Passwords) bölümünü bulun. *(Eğer bu bölümü göremiyorsanız, sitenizde REST API'nin veya bu özelliğin bir güvenlik eklentisi tarafından engellenmediğinden emin olun.)*
-4.  "**Yeni Uygulama Şifresi Adı**" (New Application Password Name) alanına bu uygulama için hatırlatıcı bir isim verin (örneğin: `WPGeminiPublisher` veya `AI Makale Botu`).
-5.  "**Yeni Uygulama Şifresi Ekle**" (Add New Application Password) butonuna tıklayın.
-6.  **❗ ÖNEMLİ:** WordPress size 16 veya 24 karakterlik, boşluklar içeren bir şifre gösterecektir (örn: `abcd efgh ijkl mnop qrst uvwx`). Bu şifreyi **hemen kopyalayın ve güvenli bir yere kaydedin**. Sayfadan ayrıldıktan veya sayfayı yeniledikten sonra bu şifre **bir daha gösterilmeyecektir!**
-7.  Kopyaladığınız bu **tam şifreyi (boşluklarıyla birlikte!)** `config.json` dosyasındaki `wp_app_password` alanına yapıştırın.
+3.  Sayfayı aşağı kaydırın ve **Uygulama Şifreleri** (Application Passwords) bölümünü bulun. *(Eğer bu bölümü göremiyorsanız, sitenizde REST API'nin veya bu özelliğin bir eklenti tarafından engellenmediğinden emin olun.)*
+4.  "**Yeni Uygulama Şifresi Adı**" alanına bu uygulama için hatırlatıcı bir isim verin (örn: `WPGeminiPublisher` veya `AI Makale Botu`).
+5.  "**Yeni Uygulama Şifresi Ekle**" butonuna tıklayın.
+6.  **❗ ÖNEMLİ:** WordPress size 16 veya 24 karakterlik, boşluklar içeren bir şifre gösterecektir (örn: `abcd efgh ijkl mnop qrst uvwx`). Bu şifreyi **hemen kopyalayın ve güvenli bir yere kaydedin**. Bu sayfadan ayrıldıktan sonra şifre **bir daha gösterilmeyecektir!**
+7.  Kopyaladığınız bu **tam şifreyi (boşluklarıyla birlikte!)** uygulamadaki "**WP Uyg. Şifresi**" alanına yapıştırın.
+
+**Tüm bu bilgileri girdikten sonra "Ayarları Kaydet" butonuna tıklayın.** Uygulama bu ayarları bilgisayarınızdaki `config.json` dosyasına kaydedecektir. Daha sonra "Bağlantıyı Test Et" butonu ile WordPress bağlantınızı kontrol edebilirsiniz.
 
 ---
 
@@ -117,16 +117,16 @@ Bu, uygulamanın sitenize güvenli bir şekilde bağlanabilmesi için kritik ön
     python main.py
     ```
 3.  Arayüz açıldığında:
-    *   İlk olarak **Ayarlar** bölümündeki bilgilerin doğru olduğundan emin olun veya doğrudan arayüzden girip "Ayarları Kaydet" butonuna tıklayın.
-    *   "**Bağlantıyı Test Et**" butonu ile WordPress sitenizle bağlantının ve kimlik doğrulamanın başarılı olup olmadığını kontrol edin.
+    *   Gerekli API ve site bilgilerini **Ayarlar** bölümüne girip kaydedin (daha önce yapmadıysanız).
+    *   "**Bağlantıyı Test Et**" ile bağlantıyı doğrulayın.
     *   "**Makale Oluştur**" bölümünde:
         *   Bir **Konu/Anahtar Kelime** girin.
-        *   "Yenile" butonu ile WordPress kategorilerinizi çekin ve listeden bir **kategori seçin** (veya varsayılanı kullanın).
-        *   İstediğiniz **makale adedini** ve yaklaşık **karakter sayısını** belirtin.
-    *   "**Prompt Ayarı**" bölümünde sistem prompt'unu mu yoksa kendi özel prompt'unuzu mu kullanacağınızı seçin.
+        *   "Yenile" ile WordPress **kategorilerini** çekip seçin.
+        *   İstediğiniz **makale adedini** ve **karakter sayısını** belirtin.
+    *   "**Prompt Ayarı**" bölümünde üretim talimatınızı seçin (Sistem veya Özel).
     *   Hazır olduğunuzda "**Makaleleri Oluştur ve Yayınla**" butonuna tıklayın.
-    *   İşlem bittiğinde bir bildirim alacaksınız.
-    *   Detayları görmek için "**İşlem Kayıtlarını Göster**" butonuna tıklayarak log penceresini açabilirsiniz.
+    *   İşlem süresince ve bitiminde bilgilendirme mesajları alacaksınız.
+    *   Detaylı işlem adımlarını ve olası hataları görmek için "**İşlem Kayıtlarını Göster**" butonuna tıklayın.
 
 ---
 
@@ -144,6 +144,5 @@ Katkıda bulunmak isterseniz, lütfen bir "Issue" açarak sorunu veya önerinizi
 
 ## 📞 İletişim
 
-*   **Geliştirici:** Efe Mehmet (Siber Otag)
 *   **Web Sitesi:** [https://siberotag.com](https://siberotag.com)
 *   **GitHub:** [https://github.com/efemehmet1965](https://github.com/efemehmet1965)
