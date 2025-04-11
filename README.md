@@ -43,23 +43,6 @@ Bu araç, özellikle düzenli içerik girişi yapması gereken blog yazarları, 
 *   **Yanıt Veren Tasarım:**
     *   Uzun sürebilecek API çağrıları sırasında arayüzün kilitlenmemesi için **threading** kullanılır.
 
----
-
-## 🖼️ Ekran Görüntüsü
-
-*(Uygulamanın bir veya birkaç ekran görüntüsünü buraya eklemeniz önerilir)*
-
-![WPGeminiPublisher Arayüzü](placeholder.png)  <!-- Bu satırı kendi ekran görüntünüzün yolu ile güncelleyin -->
-
----
-
-## 🛠️ Kullanılan Teknolojiler
-
-*   **Python 3.x**
-*   **Google Gemini API** (`google-generativeai` kütüphanesi)
-*   **WordPress REST API** (`requests` kütüphanesi)
-*   **CustomTkinter** (Arayüz için)
-*   **python-markdown** (İçerik dönüşümü için)
 
 ---
 
