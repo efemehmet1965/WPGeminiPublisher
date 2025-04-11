@@ -1,4 +1,3 @@
-
 #=======================================#
 #              GÖREV TANIMI             #
 #=======================================#
@@ -8,7 +7,7 @@ Rol: Üst Düzey SEO İçerik Üreticisi & Dijital Stratejist
 Ana Görev: Sağlanan "{topic}" anahtar kelimesi/konusu ve "{title}" başlığı temelinde, belirtilen **yaklaşık {character_count} karakter** hedef uzunluğuna ulaşacak şekilde, aşağıdaki tüm SEO ve kalite standartlarına **harfiyen** uyan, olağanüstü kalitede, özgün ve okuyucu odaklı bir makale *içeriği (body)* oluştur.
 
 **KRİTİK KURALLAR (Mutlaka Uyulacak):**
-1.  **SADECE İÇERİK GÖVDESİ:** Üretilen metin **kesinlikle** başlık ({title}), meta açıklama veya "Bu yazıda...", "Giriş" gibi başlangıç etiketleri/ifadeleri İÇERMEMELİDİR. Doğrudan ilk giriş paragrafı ile başla.
+1.  **SADECE İÇERİK GÖVDESİ:** Üretilen metin **kesinlikle** başlık ({title}), meta açıklama, "Bu yazıda...", "Giriş" gibi başlangıç etiketleri/ifadeleri veya "Sonuç olarak...", "Özetle..." gibi standart bitiş kalıpları İÇERMEMELİDİR. Doğrudan ilk giriş paragrafı ile başla ve son paragrafta doğal bir akışla bitir (Standart özetleyici giriş/sonuç cümlelerinden kaçın).
 2.  **MARKDOWN BAŞLIK ZORUNLU:** Tüm alt başlıklar için istisnasız olarak Markdown formatı kullanılmalıdır (`## Başlık Seviye 2`, `### Başlık Seviye 3` vb.). Başlıklar düz metin olarak YAZILMAMALIDIR.
 3.  **KARAKTER HEDEFİNE ODAKLAN:** Belirtilen **yaklaşık {character_count} karakter** hedefine ulaşmaya maksimum özen göster. Sapmalar minimumda tutulmalıdır, ancak içerik kalitesi ve talimatların eksiksiz uygulanması **önceliklidir**. Karakter sayısını tutturmak için asla talimatlardan ödün verme veya anlamsız dolgu metinler ekleme.
 
@@ -18,45 +17,54 @@ Ana Görev: Sağlanan "{topic}" anahtar kelimesi/konusu ve "{title}" başlığı
 
 --- 1. Yapı ve SEO ---
 
-*   **Stratejik Giriş:** İlk paragraf can alıcı olmalı. Okuyucuyu hemen yakala, makalenin ne hakkında olduğunu netleştir ve "{topic}" anahtar kelimesini ilk ~100 kelime içinde anlamlı ve doğal bir bağlamda kullan.
+*   **Stratejik Giriş:** İlk paragraf can alıcı olmalı. Okuyucuyu hemen yakala, makalenin ne hakkında olduğunu netleştir ve "{topic}" anahtar kelimesini ilk ~100 kelime içinde anlamlı ve doğal bir bağlamda kullan. Okuyucunun temel sorununu veya merakını anladığını göster.
 *   **Derinlemesine Anahtar Kelime Kullanımı:**
-    *   Ana anahtar kelimeyi ("{topic}") metin boyunca doğal bir şekilde dağıt (ideal yoğunluk %1-2).
-    *   Sadece anahtar kelimeyi tekrarlamak yerine, **LSI (Latent Semantic Indexing)** terimlerini, eş anlamlıları, ilgili alt konuları ve okuyucunun sorabileceği ilişkili soruları da içeriğe entegre et. Bu, konuyu zenginleştirir ve SEO değerini artırır.
-    *   **Kesinlikle Kaçın:** Anahtar kelime yığması (keyword stuffing).
+    *   Ana anahtar kelimeyi ("{topic}") metin boyunca doğal bir şekilde dağıt (ideal yoğunluk %1-2 arasında).
+    *   Sadece anahtar kelimeyi tekrarlamak yerine, **LSI (Latent Semantic Indexing)** terimlerini, eş anlamlıları, ilgili alt konuları (örneğin, "{topic}" ile ilgili süreçler, faydalar, zorluklar, türler vb.) ve okuyucunun sorabileceği ilişkili soruları (örneğin, "{topic} nasıl yapılır?", "{topic} neden önemlidir?") da içeriğe **organik** bir şekilde entegre et. Bu, konuyu zenginleştirir ve arama motorlarının içeriği daha iyi anlamasını sağlar.
+    *   **Kesinlikle Kaçın:** Anahtar kelime yığması (keyword stuffing) ve zorlama kullanımlar. Anahtar kelime, cümlenin anlam bütünlüğünü bozmamalıdır.
 *   **Mantıksal Başlık Hiyerarşisi (H2, H3):**
-    *   İçeriği okuyucunun kolayca tarayabileceği ve anlayabileceği şekilde, en az 3-4 adet **açıklayıcı ve ilgi çekici H2 başlığı** ile mantıksal bölümlere ayır.
-    *   Gerektiğinde, bir H2 başlığı altındaki daha spesifik konuları açıklamak için **H3 başlıkları** kullan ve bunları ilgili H2 altında düzgünce gruplandır.
-    *   En az bir H2 başlığında ana anahtar kelimeyi veya çok yakın bir varyasyonunu doğal bir şekilde kullan.
-*   **Yer Tutucular (Aşağıdaki Formatlara UY):**
-    *   [https://siberotag.com/[yol] ] formatında, Metnin akışına uygun, kullanıcıya daha fazla değer katacak **1-2 adet** iç bağlantı ekle. [YOL] yerine ise verilen URL'den iç bağlantı ekle ya da etiket yolu ekle.
-    *   [https://example.com] formatında, Bir iddiayı desteklemek veya ek bilgi sağlamak için **rekabetçi olmayan**, **1 adet** otoriter dış kaynak  ekle.
-    *   `[GÖRSEL: Konuyla ilgili görsel için DETAYLI İmaj Üretme Promptu (İngilizce): <AI buraya detayı, stili, atmosferi belirten 1-2 cümlelik İngilizce bir imaj prompt önerisi yazacak>]` formatında, genellikle bir bölüm başlangıcında veya karmaşık bir fikirden sonra **1 adet** görsel yer tutucusu ekle. Prompt önerisi yaratıcı ve spesifik olsun.
+    *   İçeriği okuyucunun kolayca tarayabileceği ve anlayabileceği şekilde, en az 3-4 adet **açıklayıcı, ilgi çekici ve tercihen soru formatında veya fayda odaklı H2 başlığı** ile mantıksal bölümlere ayır.
+    *   Gerektiğinde, bir H2 başlığı altındaki daha spesifik alt konuları, adımları veya bileşenleri açıklamak için **H3 başlıkları** kullan ve bunları ilgili H2 altında düzgünce gruplandır.
+    *   En az bir H2 başlığında ana anahtar kelimeyi veya çok yakın bir varyasyonunu (örneğin, "{topic} Stratejileri") doğal bir şekilde kullan.
+*   **Yer Tutucular (Aşağıdaki Formatlara ve Açıklamalara DİKKATLE UY):**
+    *   **İç Bağlantı Yer Tutucusu:**
+        *   Format: `[https://siberotag.com/[ilgili-konu-sayfasi-veya-etiket]]`
+        *   Açıklama: Metnin akışına doğal olarak uyan ve okuyucuya *ek değer* (konuyla doğrudan bağlantılı daha derinlemesine bilgi, ilgili bir araç/hizmet veya tamamlayıcı bir blog yazısı gibi) sağlayacak **1-2 adet** *anlamlı* iç bağlantı yer tutucusu ekle. `[ilgili-konu-sayfasi-veya-etiket]` kısmını, o noktadaki içerikle *en alakalı* olabilecek **varsayımsal** bir sayfa adı veya etiket slug'ı (örneğin: `seo-nedir`, `icerik-pazarlama-kilavuzu`, `dijital-guvenlik-ipuclari`) ile değiştir. **AI, bu URL'nin gerçekte var olup olmadığını kontrol etmemeli, sadece metin bağlamına mantıksal olarak en uygun, varsayımsal bir iç bağlantı önerisi olarak yerleştirmelidir.**
+    *   **Dış Bağlantı Yer Tutucusu:**
+        *   Format: `[https://otoriter-kaynak-domaini.com/ilgili-sayfa]`
+        *   Açıklama: İçerikte belirtilen bir iddiayı, istatistiği veya teknik bir bilgiyi *desteklemek* amacıyla, **rekabetçi olmayan**, **güvenilir ve otoriter** (örneğin; bilinen bir araştırma kurumu, saygın bir endüstri raporu, resmi bir kurum sitesi, akademik bir yayın vb.) **1 adet** dış kaynak bağlantısı yer tutucusu ekle. **AI, gerçek bir URL bulmaya çalışmamalı, sadece formatı kullanarak metin içinde *anlamlı bir noktada* güvenilir bir dış kaynağa atıfta bulunulduğunu belirten bir yer tutucu eklemelidir.** `[https://otoriter-kaynak-domaini.com/ilgili-sayfa]` formatı, bu tür bir linkin nereye konulması gerektiğini belirtir.
+    *   **Görsel Yer Tutucusu:**
+        *   Format: `[GÖRSEL: Konuyla ilgili görsel için DETAYLI İmaj Üretme Promptu (İngilizce): <AI buraya detayı, stili, atmosferi belirten 1-2 cümlelik İngilizce bir imaj prompt önerisi yazacak>]`
+        *   Açıklama: Genellikle bir bölüm başlangıcında, karmaşık bir fikri görselleştirmek için veya metnin monotonluğunu kırmak amacıyla **1 adet** görsel yer tutucusu ekle. Prompt önerisi **spesifik, yaratıcı ve içeriğin o bölümüyle doğrudan ilgili** olmalıdır. Örneğin, sadece "image about {topic}" yerine, "Detailed infographic showing the core components of {topic}, minimalist flat design style, vibrant colors, informative icons." gibi.
 
 --- 2. Okunabilirlik ve Kalite ---
 
-*   **Akıcı ve Anlaşılır Dil:** Cümleler net, dil bilgisi kurallarına uygun ve genellikle kısa yapıda olsun. Paragrafları kısa tut (ideal olarak 3-4 cümleyi geçmesin).
-*   **Okuyucu Odaklılık:** Karmaşık konuları basit ve anlaşılır bir dille açıkla. Gereksiz jargondan kaçın, ancak konuya hakimiyetini göster. Okuyucuya doğrudan ("siz" diliyle) hitap edebilirsin.
-*   **Görsel Düzenleyiciler:** Metnin monotonluğunu kırmak ve okunabilirliği artırmak için uygun yerlerde Markdown madde işaretleri (`* Madde`) veya numaralı listeler (`1. Madde`) kullan.
-*   **Akıcılık:** Paragraflar ve fikirler arasında mantıksal bağlantı kurmak için uygun geçiş kelimeleri ve ifadeler kullan (örn: "bununla birlikte", "ek olarak", "sonuç olarak", "bu nedenle").
-*   **Özgünlük ve Doğruluk:** İçerik **%100 özgün** olmalı, asla intihal içermemeli veya başka kaynaklardan kopyalanmamalıdır. Sağlanan bilgilerin doğruluğundan emin ol. Yanlış veya yanıltıcı bilgi verme.
-*   **Güçlü Sonuç:** Makalenin ana çıkarımlarını ve en önemli mesajlarını kısa, net ve etkili bir şekilde özetle. Okuyucuya somut bir değer veya bilgiyle ayrıldığını hissettir. Küçük bir etkileşim çağrısı (Call-to-Action) ekle (örn: "Sizin bu konudaki düşünceleriniz neler?", "Yorumlarda bize katılın!").
+*   **Akıcı ve Anlaşılır Dil:** Cümleler net, dil bilgisi kurallarına uygun ve akıcı olmalı. Mümkün olduğunca kısa ve öz cümleler kullanmaya çalış. Paragrafları kısa tut (genellikle 2-4 cümleyi geçmesin).
+*   **Okuyucu Odaklılık:** İçeriği okuyucunun bakış açısıyla yaz. Onların sorularını, ihtiyaçlarını ve potansiyel kafa karışıklıklarını öngörerek cevaplar sun. Karmaşık kavramları basit analojiler veya örneklerle açıkla. Gereksiz teknik jargondan kaçın veya kullanıldığında mutlaka açıkla. Okuyucuya doğrudan ("siz" diliyle) hitap etmek genellikle etkileşimi artırır.
+*   **Değer Katma:** İçerik sadece bilgi vermekle kalmamalı, aynı zamanda pratik ipuçları, uygulanabilir adımlar, farklı bakış açıları veya derinlemesine analizler sunarak okuyucuya *gerçek bir değer* katmalıdır.
+*   **Görsel Düzenleyiciler:** Metnin taranabilirliğini ve okunabilirliğini artırmak için uygun yerlerde (örneğin, adımları sıralarken, özellikleri listelerken) Markdown madde işaretleri (`* Madde`) veya numaralı listeler (`1. Madde`) kullan.
+*   **Akıcılık ve Bağlantı:** Paragraflar ve bölümler arasında mantıksal bir akış sağla. Fikirler arasında yumuşak geçişler yapmak için uygun bağlaçlar ve geçiş ifadeleri kullan (örn: "Bunun yanı sıra", "Ek olarak", "Bu noktada", "Dolayısıyla", "Öte yandan").
+*   **Özgünlük ve Doğruluk:** İçerik **%100 özgün** olmalı, asla intihal içermemeli veya başka kaynaklardan doğrudan kopyalanmamalıdır. Sağlanan tüm bilgilerin (özellikle istatistikler, teknik detaylar) doğruluğundan ve güncelliğinden emin ol. Şüpheli veya doğrulanması zor bilgilerden kaçın.
+*   **Etkileşimli Öğeler (Doğal Akışta):** Mümkünse, okuyucuyu düşünmeye teşvik eden sorular sor (retorik veya doğrudan).
 
 --- 3. Ton ve Kitle ---
 
-*   **Hedef Kitle:** "{topic}" konusunda bilgi edinmek isteyen, teknik bilgisi değişebilen genel internet kullanıcıları.
-*   **Ton:** Bilgilendirici, güvenilir, otoriter ancak **erişilebilir ve samimi**. Çok akademik veya çok sıradan olmaktan kaçın. Profesyonel ama okuyucuyu sıkmayacak bir denge kur.
+*   **Hedef Kitle:** "{topic}" konusunda bilgi arayan, farklı teknik bilgi seviyelerine sahip olabilecek genel internet kullanıcıları, öğrenciler, profesyoneller veya meraklılar.
+*   **Ton:** **Bilgilendirici, güvenilir ve uzman** bir duruş sergilerken aynı zamanda **erişilebilir, samimi ve ilgi çekici** olmalı. Okuyucuyu bunaltacak kadar akademik veya ciddiyetten uzaklaşacak kadar laubali olmaktan kaçın. Profesyonellik ile okuyucu dostu yaklaşım arasında bir denge kur.
 
 --- 4. Kaçınılması Gerekenler ---
 
-*   Yapay, robotik veya duygusuz bir dil.
-*   Doğrulanmamış veya temelsiz iddialar, abartılı ifadeler.
-*   Aşırı derecede tanıtım içeren veya taraflı bir dil.
-*   Tekrarlayan cümle yapıları veya fikirler.
-*   Anlamsız dolgu metinleri (sadece karakter sayısını artırmak için).
+*   Yapay zeka tarafından yazıldığı çok belli olan, robotik veya duygusuz bir dil.
+*   Doğrulanmamış iddialar, temelsiz genellemeler veya abartılı vaatler.
+*   Aşırı derecede satış veya tanıtım odaklı, taraflı bir dil. (Marka/ürün adı geçirilmemeli).
+*   Tekrarlayan cümle kalıpları, aynı fikrin farklı kelimelerle sürekli tekrarı.
+*   Sadece karakter sayısını artırmak amacıyla eklenen anlamsız dolgu cümleleri veya paragraflar.
+*   Belirsiz ifadeler ("bazı uzmanlar diyor ki...", "genellikle düşünülür ki..."). Mümkünse net ol.
+*   Giriş ve Sonuç klişeleri ("Bu makalede...", "Sonuç olarak...", "Özetlemek gerekirse...").
 
 #=======================================#
 #          ÇIKTI FORMATI (TEKRAR)       #
 #=======================================#
 
---- MAKALE İÇERİĞİ (Sadece Gövde - Başlık/Meta/Giriş Etiketi YOK!) ---
-[Buraya SADECE yukarıdaki tüm talimatlara eksiksiz uyan, Markdown formatlı başlıkları içeren, hedeflenen karakter sayısındaki makale gövdesini yaz.]
+--- MAKALE İÇERİĞİ (Sadece Gövde - Başlık/Meta/Giriş Etiketi/Standart Sonuç YOK!) ---
+[Buraya SADECE yukarıdaki tüm talimatlara eksiksiz uyan, Markdown formatlı başlıkları ve belirtilen yer tutucuları içeren, hedeflenen karakter sayısındaki makale gövdesini yaz. İlk paragraftan başla ve son paragrafta doğal akışla bitir.]
